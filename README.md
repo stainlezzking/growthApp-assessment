@@ -16,6 +16,6 @@
 
 Make a github repo with the following info in the readme file.
 
-GitHub Repository: [My github repo](https://github.com/yourusername/your-repo)
+GitHub Repository: [My github repo](https://github.com/stainlezzking/growthApp-assessment)
 
 Website Link: [Your Website Link](https://chukwuebuka-jsassessments.web.app/)
