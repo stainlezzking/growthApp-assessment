@@ -1,0 +1,408 @@
+/* Navbar and preloader css */
+
+/* Neon light font for preloader */
+@font-face {
+  font-family: 'neon_lights';
+  src: url('../local-fonts/neonlights-22d-webfont.woff2') format('woff2'),
+    url('../local-fonts/neonlights-22d-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.preloader_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  background-color: #070b13;
+  color: white;
+  z-index: 20;
+  font-size: 2em;
+}
+#interests li{
+  padding: 10px;
+}
+#interests li:hover{
+  outline: 2px solid black;
+}
+.letter {
+  display: inline-block;
+  color: gray;
+  font-family: "neon_lights";
+  transition: box-shadow .2s ease-out;
+}
+
+.light {
+  text-shadow: 0px 0px 12px blue;
+  display: inline-block;
+  font-family: "neon_lights";
+  color: lightblue;
+}
+
+.animation-fastFLicker {
+  animation: flicker .2s infinite forwards;
+}
+
+.animation-mediumFLicker {
+  animation: flicker .3s 1s infinite forwards;
+}
+
+.animation-slowUp {
+  animation: flicker .8s .4s infinite forwards;
+}
+
+/* first start up as glowing for some time > keyframes for initial*/
+@keyframes flicker {
+  0% {
+    text-shadow: 0px 0px 12px blue;
+    color: lightblue;
+  }
+
+  50% {
+    text-shadow: none;
+    color: gray;
+  }
+
+  100% {
+    text-shadow: 0px 0px 12px blue;
+    color: lightblue;
+  }
+}
+
+/* fl */
+h2.clickable {
+  color: white;
+  animation: clickable 1.2s linear infinite forwards;
+}
+
+@keyframes clickable {
+  0% {
+    color: rgb(144, 199, 241);
+  }
+
+  10% {
+    color: white;
+  }
+
+  15% {
+    color: rgb(144, 199, 241);
+  }
+
+  20% {
+    color: white;
+  }
+
+  100% {
+    color: white;
+  }
+}
+
+.outing_link a:hover {
+  color: #28a46a !important;
+  text-decoration: underline !important;
+}
+
+/* ############################## end of preloader ### */
+
+/*  ######### ANIMATION STYLES ####### */
+.animate__bounce {
+  -webkit-animation-name: bounce;
+  animation-name: bounce;
+  -webkit-transform-origin: center bottom;
+  transform-origin: center bottom;
+}
+
+@keyframes bounce {
+  from,
+  20%,
+  53%,
+  to {
+    -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+
+  40%,
+  43% {
+    -webkit-animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+    animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+    -webkit-transform: translate3d(0, -40px, 0) scaleY(1.1);
+    transform: translate3d(0, -30px, 0) scaleY(1.1);
+  }
+
+  70% {
+    -webkit-animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+    animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+    -webkit-transform: translate3d(0, -15px, 0) scaleY(1.05);
+    transform: translate3d(0, -15px, 0) scaleY(1.05);
+  }
+
+  80% {
+    -webkit-transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    -webkit-transform: translate3d(0, 0, 0) scaleY(0.95);
+    transform: translate3d(0, 0, 0) scaleY(0.95);
+  }
+
+  90% {
+    -webkit-transform: translate3d(0, -4px, 0) scaleY(1.02);
+    transform: translate3d(0, -4px, 0) scaleY(1.02);
+  }
+}
+
+@-webkit-keyframes scale-in-bottom {
+  0% {
+    -webkit-transform: scale(0);
+    transform: scale(0);
+    -webkit-transform-origin: 50% 100%;
+    transform-origin: 50% 100%;
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-transform-origin: 50% 100%;
+    transform-origin: 50% 100%;
+    opacity: 1;
+  }
+}
+@keyframes scale-in-bottom {
+  0% {
+    -webkit-transform: scale(0);
+    transform: scale(0);
+    -webkit-transform-origin: 50% 100%;
+    transform-origin: 50% 100%;
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-transform-origin: 50% 100%;
+    transform-origin: 50% 100%;
+    opacity: 1;
+  }
+}
+
+/* ### bounce top end ###### */
+
+/*  PAGE CSS */
+/* ### bootstrap reset */
+
+@media (max-width: 1000px) {
+  .container,
+  .container-md,
+  .container-sm {
+    max-width: 900px !important;
+  } 
+  .caption {
+    text-align: justify;
+  }
+}
+@media (max-width: 500px){
+  #redis img{
+    width: 1.5em;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .image-prev::before {
+    background-size: contain !important;
+  }
+  .image-prev img {
+    width: 100%;
+  }
+  .about__image-prev img {
+    width: 100%;
+  }
+ 
+}
+
+
+
+/* ############# */
+:root {
+  --bg: #070b13;
+  --fainted: #afbdd6;
+  /* --active : #0d1e36; */
+  --active: #2258a5;
+  --color: #e7eefc;
+  --white: white;
+  --black: #000;
+}
+body {
+  background-color: var(--bg);
+  color: var(--color);
+}
+.navlinks {
+  list-style-type: none;
+}
+.navbar-brand {
+  font-size: 1.5rem;
+}
+.mw-500 {
+  max-width: 500px;
+}
+.mw-400 {
+  max-width: 400px;
+}
+.mw-300 {
+  max-width: 300px;
+}
+.black-bg {
+  background-color: var(--black);
+}
+.fainted {
+  color: var(--fainted);
+}
+#skills svg {
+  display: block;
+  margin: 0 1rem;
+  height: 100px;
+}
+.image-prev::before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -10;
+  text-align: center;
+  opacity: 0.4;
+  left: 0;
+  bottom: 10%;
+  /* give this a little animation */
+  background: url("../images/setup-bg.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+
+  /* animation */
+  -webkit-animation: bounce 1.1s both;
+  animation: bounce 1.1s both;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  /* -webkit-animation-duration: var(--animate-duration); */
+  -webkit-animation-duration: 2s;
+  animation-duration: 2s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+}
+.image-prev::after {
+  margin-top: 3rem;
+  content: var(--name-type);
+  display: block;
+  text-transform: uppercase;
+  text-align: center;
+}
+.navbar {
+  position: static;
+}
+
+/* navbar custom breakpoint */
+@media screen and (max-width: 992px) {
+  #navbarSupportedContent {
+    position: absolute;
+    width: 0;
+    height: 0;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    z-index: 100;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    background-color: #070b13;
+  }
+  /* call the animation on reverse */
+  #navbarSupportedContent.show {
+    -webkit-animation: scale-in-bottom 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94)
+      both;
+    animation: scale-in-bottom 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    touch-action: none;
+  }
+
+  .navbar-nav {
+    width: 100%;
+  }
+
+  button.navbar-toggler svg {
+    width: 1.5em;
+    height: 1.5em;
+  }
+}
+a.nav-link {
+  color: white !important;
+  position: relative;
+}
+a.nav-link.active {
+  color: var(--active) !important;
+  font-weight: bold;
+}
+
+a.nav-link::before {
+  content: "";
+  display: block;
+  width: 0px;
+  height: 3px;
+  background-color: black;
+  position: absolute;
+  top: 50%;
+  left: 0px;
+  transition: all 0.2s linear;
+}
+a.nav-link:hover::before {
+  width: 100%;
+}
+section {
+  margin: 2rem 0;
+  padding: 1rem 0;
+}
+.project-image {
+  transition: box-shadow 0.4s ease-in, bottom 0.2s linear;
+  position: relative;
+  bottom: 0;
+}
+.box:hover .project-image {
+  box-shadow: 1rem 0 2rem rgba(32, 50, 83, 0.175) !important;
+  bottom: 20px;
+}
+.proj__detail::after {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: -20px;
+  height: 0.3em;
+  left: 0;
+  width: 0;
+  transition: width 0.6s ease-out;
+  background-color: #13aa52;
+}
+.built-with svg{
+    display: block;
+    margin: 0 .5rem;
+    height: 20px !important;
+}
+.box:hover .proj__detail::after {
+  width: 100%;
+}
+.hello {
+  max-width: 40%;
+}
+
+.btn-outline-primary {
+  color: white;
+  border-color: white;
+  border-width: 3px;
+}
+
+#redis {
+  display: flex;
+  align-items: center;
+}
